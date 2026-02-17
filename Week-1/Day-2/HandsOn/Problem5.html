@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enrollment</title>
+</head>
+<body>
+
+<header>
+    <h1>Course Enrollment Form</h1>
+</header>
+
+<main>
+    <form>
+        <!-- Progress -->
+        <section>
+            <label for="progress">Enrollment Progress:</label><br>
+            <progress id="progress" value="10" max="100"></progress>
+            <p>Step 1 of 4 completed</p>
+        </section>
+
+        <br>
+
+        <!-- Email -->
+        <section>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+        </section>
+
+        <br>
+
+        <!-- Course Suggestions -->
+        <section>
+            <label for="course">Select Course:</label><br>
+            <input list="course-list" id="course" name="course" required placeholder="Start typing...">
+
+            <datalist id="course-list">
+                <option value="HTML Fundamentals">
+                <option value="CSS Basics">
+                <option value="JavaScript Essentials">
+                <option value="Web Development Bootcamp">
+                <option value="React for Beginners">
+            </datalist>
+        </section>
+
+        <br>
+
+        <!-- Skill Level Meter -->
+        <section>
+            <label for="skill">Skill Level:</label><br>
+            <meter id="skill" min="0" max="10" value="1"></meter>
+            <p>Beginner (0) – Advanced (10)</p>
+        </section>
+
+        <br>
+
+        <!-- Experience Range -->
+        <section>
+            <label for="experience">Experience Level (0–10):</label><br>
+            <input type="range" id="experience" name="experience" min="0" max="10" value="5">
+        </section>
+
+        <br>
+
+        
+        <section>
+            <label for="years">Years of Learning Experience:</label><br>
+            <input type="number" id="years" name="years" min="0" max="20" required>
+        </section>
+
+        <br>
+
+        <!-- Submit -->
+        <section>
+            <button type="submit">Enroll Now</button>
+            <button type="reset">Reset Form</button>
+        </section>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Online Learning Platform</p>
+</footer>
+
+</body>
+</html>
