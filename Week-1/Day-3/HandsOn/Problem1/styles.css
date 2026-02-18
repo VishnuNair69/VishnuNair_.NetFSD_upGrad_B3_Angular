@@ -1,0 +1,61 @@
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+}
+
+
+.info-section {
+    background-color: #f0f8ff;
+    border: 2px solid #333;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+
+.box-demo {
+    background-color: #e0ffe0;
+    border: 2px dashed green;
+    padding: 20px;      /* space inside the box */
+    margin: 30px;       /* space outside the box */
+}
+
+
+.form-section {
+    border: 2px solid #666;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.form-section input,
+.form-section select {
+    padding: 6px;
+    width: 250px;
+}
+
+.form-section button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background-color: #45a049;
+}
