@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+@media (max-width: 600px) {
+
+
+    body {
+        background-color: #e3f2fd;
+    }
+
+
+    main {
+        font-size: 14px;
+    }
+
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

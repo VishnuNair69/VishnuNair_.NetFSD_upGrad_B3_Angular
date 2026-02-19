@@ -31,8 +31,8 @@ p {
 .box-demo {
     background-color: #e0ffe0;
     border: 2px dashed green;
-    padding: 20px;      /* space inside the box */
-    margin: 30px;       /* space outside the box */
+    padding: 20px;      
+    margin: 30px;       
 }
 
 
