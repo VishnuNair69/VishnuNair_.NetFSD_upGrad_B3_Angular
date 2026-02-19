@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Signal Simulator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    /* h2{
+        justify-content: center;
+    } */
+  </style>
+</head>
+<body>
+  <h2>Traffic Signal Simulator</h2>
+
+  <script>
+    
+    let signal = prompt("Enter the traffic signal color (red/yellow/green):").toLowerCase(); 
+
+    
+    switch (signal) {
+      case "red":
+        document.write("Stop");
+        break;
+
+      case "yellow":
+        document.write("Get Ready");
+        break;
+
+      case "green":
+        document.write("Go");
+        break;
+
+      default:
+        document.write("Invalid signal color");
+    }
+  </script>
+</body>
+</html>
