@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Analysis Tool</title>
+</head>
+<body>
+  <h2>Number Analysis Tool</h2>
+
+  <form onsubmit="return false;">
+    <input type="number" id="numberInput" placeholder="Enter a number" required>
+    <button type="button" onclick="analyzeNumber()">Analyze</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function analyzeNumber() {
+      let num = parseInt(document.getElementById("numberInput").value);
+
+      if (isNaN(num)) {
+        document.getElementById("result").innerText = "Please enter a valid number";
+        return;
+      }
+
+      let output = "";
+
+      // 1️⃣ Positive or Negative (ternary)
+      let sign = (num >= 0) ? "Positive" : "Negative";
+      output += "Number is: " + sign + "<br>";
+
+      // 2️⃣ Even or Odd (if-else)
+      if (num % 2 === 0) {
+        output += "Number is Even<br>";
+      } else {
+        output += "Number is Odd<br>";
+      }
+
+      // 3️⃣ Loop from 1 to num
+      output += "Numbers from 1 to " + num + ":<br>";
+      for (let i = 1; i <= num; i++) {
+        output += i + "<br>";
+      }
+
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</body>
+</html>

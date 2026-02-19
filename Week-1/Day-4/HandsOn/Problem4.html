@@ -9,34 +9,39 @@
       text-align: center;
       background-color: #f0f0f0;
     }
-    /* h2{
-        justify-content: center;
-    } */
   </style>
 </head>
 <body>
   <h2>Traffic Signal Simulator</h2>
 
+  <form onsubmit="return false;">
+    <label for="signal">Enter Traffic Signal Color:</label>
+    <input type="text" id="signal" placeholder="red, yellow, green" required>
+    <button type="button" onclick="checkSignal()">Check Signal</button>
+  </form>
+
+  <p id="result"></p>
+
   <script>
-    
-    let signal = prompt("Enter the traffic signal color (red/yellow/green):").toLowerCase(); 
+    function checkSignal() {
+      let signal = document.getElementById("signal").value.toLowerCase(); 
 
-    
-    switch (signal) {
-      case "red":
-        document.write("Stop");
-        break;
+      switch (signal) {
+        case "red":
+          document.getElementById("result").innerText = "Stop";
+          break;
 
-      case "yellow":
-        document.write("Get Ready");
-        break;
+        case "yellow":
+          document.getElementById("result").innerText = "Get Ready";
+          break;
 
-      case "green":
-        document.write("Go");
-        break;
+        case "green":
+          document.getElementById("result").innerText = "Go";
+          break;
 
-      default:
-        document.write("Invalid signal color");
+        default:
+          document.getElementById("result").innerText = "Invalid signal color";
+      }
     }
   </script>
 </body>
