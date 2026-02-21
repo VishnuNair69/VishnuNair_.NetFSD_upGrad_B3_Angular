@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App with Scope Control</title>
+</head>
+<body>
+    <h2>Counter App with Scope Control</h2>
+    <button onclick="increamentNum()">Increment</button>
+    <button onclick="restNum()">Reset</button>
+    <p id="numbers">0</p>
+
+    <script>
+        var count = 0;
+        function increamentNum(){ 
+            count++;
+            document.getElementById("numbers").innerText =count ;
+        }
+        function restNum(){
+            count =0;
+            document.getElementById("numbers").innerText = count;
+        }
+    </script>
+</body>
+</html>
