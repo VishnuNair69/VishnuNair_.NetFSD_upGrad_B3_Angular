@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Student Profile</title>
+  <style>
+    #profileBox {
+      border: 2px solid #333;
+      padding: 12px;
+      width: 260px;
+      margin-top: 10px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Profile</h2>
+
+  <button onclick="showProfile()">Show Profile</button>
+  <button onclick="increaseMarks()">Increase Marks</button>
+
+  <div id="profileBox"></div>
+
+  <script>
+    // ✅ Global student object
+    var student = {
+      name: "Rahul",
+      rollNo: 101,
+      marks: 75
+    };
+
+    function updateStudentProfile(studentObj) {
+      var profileHTML =
+        "<strong>Name:</strong> " + studentObj.name + "<br>" +
+        "<strong>Roll No:</strong> " + studentObj.rollNo + "<br>" +
+        "<strong>Marks:</strong> " + studentObj.marks;
+
+      document.getElementById("profileBox").innerHTML = profileHTML;
+    }
+
+    function updateMarks(newMarks) {
+      student.marks = newMarks;         // ✅ update shared object
+      updateStudentProfile(student);    // ✅ refresh display
+    }
+
+    // Button handlers
+    function showProfile() {
+      updateStudentProfile(student);
+    }
+
+    function increaseMarks() {
+      updateMarks(student.marks + 5);
+    }
+  </script>
+
+</body>
+</html>
