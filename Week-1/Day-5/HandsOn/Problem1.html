@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting's</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        h1{
+            color: deepskyblue;
+            text-shadow: 5px 5px 10px gray;
+        }
+    </style>
+</head>
+<body>
+    <h2>Greeting Generator </h2>
+    <br>
+    Name:<input type="text" id="getname">
+    <br><br>
+    <input type="button" value="Click Me" onclick="greetUser()">
+    <h1></h1>
+
+    <script>
+        
+        function greetUser(){
+            let name=document.getElementById("getname");
+            let displayName = document.querySelector("h1");
+            displayName.innerText = `Hello ${name.value}! Welcome to Our Website.`;
+        }
+
+    </script>
+</body>
+</html>
