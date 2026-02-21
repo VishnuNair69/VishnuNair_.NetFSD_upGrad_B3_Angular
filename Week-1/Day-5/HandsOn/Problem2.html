@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Page</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        h3{
+            color: rgb(70, 200, 200);
+        }
+    </style>
+</head>
+<body>
+    <h2>User Information</h2>
+    <button onclick="createUser()">Click Here To display User Info</button>
+
+    <h3 id="name"></h3>
+    <h3 id="age"></h3>
+    <h3 id="city"></h3>
+
+    <script>
+
+        function createUser(){
+            var user = {
+                name:"Vishnu",
+                age:24,
+                city:"Nagpur"
+            };
+            showUser(user)
+        }
+        function showUser(userObj){
+            document.getElementById("name").innerText = "Name:"+userObj.name;
+            document.getElementById("age").innerText = "Age:"+ userObj.age;
+            document.getElementById("city").innerText = "City:"+ userObj.city
+        }
+    </script>
+</body>
+</html>
