@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 30px auto;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 5px;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    .success {
+      color: green;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📝 Registration Form</h2>
+
+  <label>Name:</label>
+  <input type="text" id="name" onchange="validateName()" />
+  <div id="nameMsg" class="error"></div>
+
+  <label>Email:</label>
+  <input type="text" id="email" onchange="validateEmail()" />
+  <div id="emailMsg" class="error"></div>
+
+  <label>Age:</label>
+  <input type="number" id="age" onchange="validateAge()" />
+  <div id="ageMsg" class="error"></div>
+
+  <button onclick="submitForm()">Register</button>
+
+  <div id="finalMsg"></div>
+
+  <script>
+    function validateName() {
+      const name = document.getElementById("name").value;
+      const msg = document.getElementById("nameMsg");
+
+      if (name.trim() === "") {
+        msg.textContent = "Name cannot be empty ❌";
+        return false;
+      } else {
+        msg.textContent = "Looks good ✅";
+        msg.className = "success";
+        return true;
+      }
+    }
+
+    function validateEmail() {
+      const email = document.getElementById("email").value;
+      const msg = document.getElementById("emailMsg");
+
+      if (!email.includes("@")) {
+        msg.textContent = "Email must contain @ ❌";
+        return false;
+      } else {
+        msg.textContent = "Valid email ✅";
+        msg.className = "success";
+        return true;
+      }
+    }
+
+    function validateAge() {
+      const age = document.getElementById("age").value;
+      const msg = document.getElementById("ageMsg");
+
+      if (age <= 18) {
+        msg.textContent = "Age must be greater than 18 ❌";
+        return false;
+      } else {
+        msg.textContent = "Age accepted ✅";
+        msg.className = "success";
+        return true;
+      }
+    }
+
+    function submitForm() {
+      const isNameValid = validateName();
+      const isEmailValid = validateEmail();
+      const isAgeValid = validateAge();
+
+      if (isNameValid && isEmailValid && isAgeValid) {
+        const user = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          age: document.getElementById("age").value
+        };
+
+        sessionStorage.setItem("userData", JSON.stringify(user));
+
+        document.getElementById("finalMsg").textContent = "Registration successful 🎉 Data stored in sessionStorage.";
+        document.getElementById("finalMsg").className = "success";
+      } else {
+        document.getElementById("finalMsg").textContent = "Please fix the errors above ❗";
+        document.getElementById("finalMsg").className = "error";
+      }
+    }
+  </script>
+
+</body>
+</html>
