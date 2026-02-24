@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Marks Analyzer</title>
+</head>
+<body>
+  <h2>Student Marks Analyzer</h2>
+  <div id="output"></div>
+
+  <script>
+// Store student marks in an array
+const marks = [78, 85, 90, 66, 72];
+
+// Arrow function to calculate total using reduce()
+const calculateTotal = (arr) =>
+  arr.reduce((sum, mark) => sum + mark, 0);
+
+// Arrow function to calculate average
+const calculateAverage = (total, count) =>
+  total / count;
+
+// Arrow function to determine pass/fail
+const getResult = (avg) =>
+  avg >= 40 ? "Pass" : "Fail";
+
+// Map example (can be used for scaling or formatting)
+const formattedMarks = marks.map(mark => `Mark: ${mark}`);
+
+// Calculations
+const total = calculateTotal(marks);
+const average = calculateAverage(total, marks.length);
+const result = getResult(average);
+
+// Display output using template literals
+const output = document.getElementById("output");
+output.innerHTML = `
+  <p>${formattedMarks.join("<br>")}</p>
+  <p><strong>Total Marks:</strong> ${total}</p>
+  <p><strong>Average Marks:</strong> ${average.toFixed(2)}</p>
+  <p><strong>Result:</strong> ${result}</p>
+`;
+  </script>
+</body>
+</html>

@@ -26,7 +26,7 @@
 </head>
 <body>
 
-  <h2>📍 Location-Based Logger</h2>
+  <h2>Location-Based Logger</h2>
 
   <button onclick="getLocation()">Get My Location</button>
 
@@ -49,7 +49,7 @@
       const status = document.getElementById("status");
 
       if (!navigator.geolocation) {
-        status.textContent = "Geolocation is not supported by your browser ❌";
+        status.textContent = "Geolocation is not supported by your browser";
         status.className = "error";
         return;
       }
@@ -87,28 +87,11 @@
       renderHistory();
 
       const status = document.getElementById("status");
-      status.textContent = "Location saved ✅";
+      status.textContent = "Location saved ";
       status.className = "success";
     }
 
-    function errorCallback(error) {
-      const status = document.getElementById("status");
-
-      if (error.code === error.PERMISSION_DENIED) {
-        status.textContent = "Permission denied by user ❌";
-      } 
-      else if (error.code === error.TIMEOUT) {
-        status.textContent = "Location request timed out ⏳";
-      } 
-      else if (error.code === error.POSITION_UNAVAILABLE) {
-        status.textContent = "Location unavailable 📡";
-      } 
-      else {
-        status.textContent = "Unknown error occurred ❗";
-      }
-
-      status.className = "error";
-    }
+    
 
     function renderHistory() {
       const historyList = document.getElementById("history");
