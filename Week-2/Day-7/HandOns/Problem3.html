@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Filter</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Employee List</h2>
+
+  <!-- Dropdown -->
+  <label>Select Job: </label>
+  <select id="jobSelect">
+    <option value="All">All Employees</option>
+    <option value="Manager">Manager</option>
+    <option value="Salesman">Salesman</option>
+    <option value="Developer">Developer</option>
+  </select>
+
+  <!-- Button -->
+  <button onclick="showEmployees()">Show Emps</button>
+
+  <!-- Output Table -->
+  <div id="output"></div>
+
+  <script>
+    // a. Collection of employees (array of objects)
+    const employees = [
+      { id: 1, name: "Rahul", job: "Manager", salary: 50000 },
+      { id: 2, name: "Anita", job: "Salesman", salary: 30000 },
+      { id: 3, name: "Karan", job: "Developer", salary: 45000 },
+      { id: 4, name: "Priya", job: "Salesman", salary: 28000 },
+      { id: 5, name: "Amit", job: "Manager", salary: 55000 },
+    ];
+
+   
+  </script>
+
+</body>
+</html>
