@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px 24px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      background: #2563eb;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    #message {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Feedback</h2>
+    <button id="submitBtn">Submit Feedback</button>
+    <p id="message">✅ Thank you for your feedback!</p>
+  </div>
+
+  <script>
+    const button = document.getElementById("submitBtn");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", () => {
+      message.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
