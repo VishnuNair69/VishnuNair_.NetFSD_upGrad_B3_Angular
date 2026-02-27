@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Product Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .app {
+      max-width: 420px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .empty {
+      text-align: center;
+      color: #777;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app">
+    <h2>Product Search</h2>
+    <input id="searchInput" placeholder="Search products..." />
+    <ul id="productList"></ul>
+    <p id="emptyMsg" class="empty" style="display:none;">No Results Found</p>
+  </div>
+
+  <script>
+    // State
+    const products = [
+      "Laptop",
+      "Smartphone",
+      "Headphones",
+      "Keyboard",
+      "Mouse",
+      "Monitor",
+      "Charger",
+      "Webcam"
+    ];
+
+    let filteredProducts = [...products];
+
+    // DOM
+    const searchInput = document.getElementById("searchInput");
+    const productList = document.getElementById("productList");
+    const emptyMsg = document.getElementById("emptyMsg");
+
+    // Render list
+    const renderProducts = (list) => {
+      productList.innerHTML = "";
+
+      if (list.length === 0) {
+        emptyMsg.style.display = "block";
+        return;
+      }
+
+      emptyMsg.style.display = "none";
+
+      list.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        productList.appendChild(li);
+      });
+    };
+
+    // Filter logic
+    const filterProducts = (query) => {
+      filteredProducts = products.filter(p =>
+        p.toLowerCase().includes(query.toLowerCase())
+      );
+      renderProducts(filteredProducts);
+    };
+
+    // Event delegation (parent container handles events)
+    document.body.addEventListener("input", (e) => {
+      if (e.target.id === "searchInput") {
+        filterProducts(e.target.value);
+      }
+    });
+
+    // Initial render
+    renderProducts(products);
+  </script>
+
+</body>
+</html>
