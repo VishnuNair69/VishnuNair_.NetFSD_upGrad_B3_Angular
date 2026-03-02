@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ Toggle - jQuery</title>
+  
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f9f9f9;
+    }
+
+    .faq-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      padding: 12px;
+      background: #eee;
+      margin-top: 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .faq-question.active {
+      background: #cce5ff;
+      font-weight: bold;
+      border: 2px solid black;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px 12px 5px;
+      background: #f4f4f4;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <div class="faq-question">1. What courses do you offer?</div>
+      <div class="faq-answer">We offer web development, data science, and AI courses.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">2. Do you provide certificates?</div>
+      <div class="faq-answer">Yes, certificates are provided after course completion.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">3. Are the classes online or offline?</div>
+      <div class="faq-answer">We provide both online and offline learning options.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">4. What is the course duration?</div>
+      <div class="faq-answer">Course duration varies between 1 to 6 months.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">5. Is there any placement support?</div>
+      <div class="faq-answer">Yes, we provide placement assistance and mock interviews.</div>
+    </div>
+
+  </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      $(".faq-question").click(function () {
+
+        // Toggle only the clicked question's answer
+        $(this).next(".faq-answer").slideToggle(300);
+
+        // Highlight the selected question
+        $(this).toggleClass("active");
+
+        // Optional: close other answers 
+        $(".faq-answer").not($(this).next()).slideUp(300);
+        $(".faq-question").not($(this)).removeClass("active");
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>
