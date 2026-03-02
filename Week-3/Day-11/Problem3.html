@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product List - Add to Cart</title>
+  
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f5f5f5;
+    }
+
+    .cart {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .product {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .added-msg {
+      color: green;
+      font-size: 14px;
+      margin-left: 10px;
+      display: none;
+    }
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cart">
+    🛒 Cart Items: <span id="cartCount">0</span>
+  </div>
+
+  <div id="productList">
+
+    <div class="product">
+      <span>📘 JavaScript Basics Book</span>
+      <div>
+        <button class="add-to-cart">Add to Cart</button>
+        <span class="added-msg">Added ✔</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <span>🎧 Wireless Headphones</span>
+      <div>
+        <button class="add-to-cart">Add to Cart</button>
+        <span class="added-msg">Added ✔</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <span>⌨️ Mechanical Keyboard</span>
+      <div>
+        <button class="add-to-cart">Add to Cart</button>
+        <span class="added-msg">Added ✔</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <span>🖱️ Gaming Mouse</span>
+      <div>
+        <button class="add-to-cart">Add to Cart</button>
+        <span class="added-msg">Added ✔</span>
+      </div>
+    </div>
+
+  </div>
+<script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      var cartCount = 0;
+
+      $("#productList").on("click", ".add-to-cart", function () {
+
+        cartCount++;
+
+        // Update cart counter
+        $("#cartCount").text(cartCount);
+
+        // Disable the clicked button
+        $(this).prop("disabled", true);
+        $(this).attr("title", "Already added to cart");
+
+        // Show confirmation message
+        $(this).siblings(".added-msg").text("Added ✔").show();
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>
