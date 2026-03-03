@@ -38,7 +38,7 @@ CREATE TABLE EventDetails (
     EventName VARCHAR(50) NOT NULL,
     EventCategory VARCHAR(50) NOT NULL,
     EventDate DATETIME NOT NULL,
-    Description VARCHAR(500) NULL,
+    Description VARCHAR(500),
     Status VARCHAR(20) NOT NULL,
 
     CONSTRAINT CHK_Event_Status CHECK (Status IN ('Active','In-Active')),
@@ -90,3 +90,33 @@ VALUES
 ('Ms. Kavita Joshi');
 
 select * from SpeakersDetails;
+
+
+
+
+--------------Table-4--------------------------
+
+CREATE TABLE SessionInfo (
+    SessionId INT PRIMARY KEY IDENTITY(1,1),
+    EventId INT NOT NULL,
+    SessionTitle VARCHAR(50) NOT NULL,
+    SpeakerId INT NOT NULL,
+    Description VARCHAR(500),
+    SessionStart DATETIME NOT NULL,
+    SessionEnd DATETIME NOT NULL,
+    SessionUrl VARCHAR(200),
+
+    CONSTRAINT FK_Session_Event 
+        FOREIGN KEY (EventId) REFERENCES EventDetails(EventId),
+
+    CONSTRAINT FK_Session_Speaker 
+        FOREIGN KEY (SpeakerId) REFERENCES SpeakersDetails(SpeakerId),
+
+    CONSTRAINT CHK_SessionTitle_Length 
+        CHECK (LEN(SessionTitle) BETWEEN 1 AND 50),
+
+    CONSTRAINT CHK_Session_Time 
+        CHECK (SessionEnd > SessionStart)
+);
+
+select * from SessionInfo;
