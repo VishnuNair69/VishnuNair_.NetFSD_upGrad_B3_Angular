@@ -39,6 +39,18 @@ SELECT category_id, AVG(list_price) AS avg_price
 FROM products
 GROUP BY category_id;
 
+
+
+--
+--1. Use nested query to calculate total order value per customer.
+--2. Classify customers using conditional logic:
+--   - 'Premium' if total order value > 10000
+--   - 'Regular' if total order value between 5000 and 10000
+--   - 'Basic' if total order value < 5000
+--3. Use UNION to display customers with orders and customers without orders.
+--4. Display full name using string concatenation.
+--5. Handle NULL cases appropriately.
+--
 SELECT 
     product_name + ' (' + CAST(model_year AS VARCHAR) + ')' AS product_info,
     product_name,
