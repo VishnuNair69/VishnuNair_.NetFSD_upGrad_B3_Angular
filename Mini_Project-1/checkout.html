@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — ShopEZ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="shopez-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Shop<span>EZ</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html" class="active">Checkout</a></li>
+      </ul>
+      <a href="cart.html" class="nav-cart-btn">
+        🛒 Cart <span class="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="cart.html">Cart</a>
+    <span>›</span>
+    <span style="color:var(--text-secondary);">Checkout</span>
+  </div>
+
+  <!-- ====== CHECKOUT FORM SECTION ====== -->
+  <div class="section-wrap" id="checkout-form-section">
+    <div style="margin-bottom:36px;">
+      <h1 style="font-family:var(--font-display);font-size:2rem;font-weight:700;margin:0 0 6px;">
+        Secure <span style="color:var(--accent);">Checkout</span>
+      </h1>
+      <p style="color:var(--text-secondary);margin:0;">Complete your order details below</p>
+    </div>
+
+    <!-- Step indicator -->
+    <div class="checkout-steps" style="margin-bottom:40px;">
+      <div class="step-item done">
+        <div class="step-num">✓</div>
+        <span class="step-name">Cart</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item active">
+        <div class="step-num">2</div>
+        <span class="step-name">Details</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <span class="step-name">Confirm</span>
+      </div>
+    </div>
+
+    <div class="checkout-layout">
+      <!-- Form -->
+      <div class="checkout-form-wrap">
+        <h2 class="checkout-form-title">Delivery Information</h2>
+        <form id="checkout-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="field-name">Full Name *</label>
+            <input type="text" id="field-name" class="form-input" data-validate="required"
+                   placeholder="e.g., Vishnu Sharma" />
+            <span class="form-error-msg"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="field-email">Email Address *</label>
+              <input type="email" id="field-email" class="form-input" data-validate="email"
+                     placeholder="you@example.com" />
+              <span class="form-error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="field-phone">Phone Number *</label>
+              <input type="tel" id="field-phone" class="form-input" data-validate="phone"
+                     placeholder="10-digit mobile number" maxlength="10" />
+              <span class="form-error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="field-address">Delivery Address *</label>
+            <textarea id="field-address" class="form-input form-textarea" data-validate="required"
+                      placeholder="House/Flat No., Street, Colony..."></textarea>
+            <span class="form-error-msg"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="field-city">City *</label>
+              <input type="text" id="field-city" class="form-input" data-validate="required"
+                     placeholder="e.g., Nagpur" />
+              <span class="form-error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="field-state">State *</label>
+              <input type="text" id="field-state" class="form-input" data-validate="required"
+                     placeholder="e.g., Maharashtra" />
+              <span class="form-error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="field-pin">PIN Code *</label>
+            <input type="text" id="field-pin" class="form-input" data-validate="pin"
+                   placeholder="6-digit PIN" maxlength="6" />
+            <span class="form-error-msg"></span>
+          </div>
+
+          <!-- Payment method (visual only) -->
+          <div style="margin-top:8px;padding:20px;background:var(--bg-elevated);border-radius:var(--radius-sm);border:1px solid var(--border);">
+            <p style="font-size:0.82rem;font-weight:700;letter-spacing:0.5px;color:var(--text-secondary);text-transform:uppercase;margin:0 0 14px;">Payment Method</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.88rem;">
+                <input type="radio" name="payment" value="cod" checked style="accent-color:var(--accent);" /> Cash on Delivery
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.88rem;">
+                <input type="radio" name="payment" value="upi" style="accent-color:var(--accent);" /> UPI
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.88rem;">
+                <input type="radio" name="payment" value="card" style="accent-color:var(--accent);" /> Card
+              </label>
+            </div>
+            <p style="margin:12px 0 0;font-size:0.78rem;color:var(--text-muted);">
+              ℹ️ This is a demo application. No real payment will be processed.
+            </p>
+          </div>
+
+          <button type="submit" class="btn-primary" id="place-order-btn"
+                  style="width:100%;justify-content:center;padding:18px;font-size:1.05rem;margin-top:24px;border-radius:var(--radius-sm);">
+            Place Order →
+          </button>
+        </form>
+      </div>
+
+      <!-- Order Summary -->
+      <div>
+        <div class="order-summary" style="position:sticky;top:90px;">
+          <h3 class="summary-title">Order Summary</h3>
+
+          <div id="checkout-order-list" style="margin-bottom:8px;">
+            <!-- Items populated by checkout.js -->
+          </div>
+
+          <div class="summary-row" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+            <span class="label">Subtotal</span>
+            <span class="value" id="co-subtotal">₹0</span>
+          </div>
+          <div class="summary-row">
+            <span class="label">Shipping</span>
+            <span class="value" id="co-shipping">₹99</span>
+          </div>
+          <div class="summary-row total">
+            <span class="label">Total</span>
+            <span class="value" id="co-total">₹0</span>
+          </div>
+
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--text-muted);">
+              <span style="color:#4caf50;">🔒</span> SSL Secured Transaction
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--text-muted);">
+              <span style="color:var(--accent);">↩️</span> 7-Day Return Policy
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.82rem;color:var(--text-muted);">
+              <span style="color:var(--accent);">🚀</span> Delivery in 2–3 Business Days
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SUCCESS SECTION ====== -->
+  <div id="checkout-success-section" style="display:none;padding:40px 20px;">
+    <div class="success-wrap">
+      <div class="success-icon">✓</div>
+      <h2 class="success-title">Order Placed!</h2>
+      <p class="success-msg">
+        Thank you for your order. We've received your request and will process it shortly.
+        You'll receive a confirmation at your email address.
+      </p>
+      <div class="order-id" id="success-order-id">SEZ-XXXX</div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="products.html" class="btn-primary">Continue Shopping →</a>
+        <a href="index.html" class="btn-outline">Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Shop<span>EZ</span></div>
+        <p class="footer-desc">Premium electronics, curated for you.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div></div><div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ShopEZ. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

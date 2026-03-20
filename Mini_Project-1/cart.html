@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Cart — ShopEZ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="shopez-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Shop<span>EZ</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+      <a href="cart.html" class="nav-cart-btn">
+        🛒 Cart <span class="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span style="color:var(--text-secondary);">Shopping Cart</span>
+  </div>
+
+  <!-- CART SECTION -->
+  <div class="section-wrap">
+    <div style="margin-bottom:36px;">
+      <h1 style="font-family:var(--font-display);font-size:2rem;font-weight:700;margin:0 0 6px;">
+        Shopping <span style="color:var(--accent);">Cart</span>
+      </h1>
+      <p style="color:var(--text-secondary);margin:0;" id="cart-item-count-label"></p>
+    </div>
+
+    <!-- Empty state -->
+    <div class="cart-empty" id="cart-empty" style="display:none;">
+      <div class="cart-empty-icon">🛒</div>
+      <h3>Your cart is empty</h3>
+      <p>Looks like you haven't added anything yet. Start browsing our products!</p>
+      <a href="products.html" class="btn-primary">Browse Products →</a>
+    </div>
+
+    <!-- Cart layout (shown when items exist) -->
+    <div class="cart-layout" id="cart-main-layout">
+      <!-- Cart items -->
+      <div>
+        <div id="cart-items-wrap">
+          <!-- Rendered by cart.js -->
+        </div>
+
+        <!-- Continue shopping -->
+        <div style="margin-top:20px;">
+          <a href="products.html" class="btn-outline" style="display:inline-flex;">
+            ← Continue Shopping
+          </a>
+        </div>
+      </div>
+
+      <!-- Order summary -->
+      <div id="cart-summary-section">
+        <div class="order-summary">
+          <h3 class="summary-title">Order Summary</h3>
+
+          <div class="summary-row">
+            <span class="label">Items</span>
+            <span class="value" id="summary-count">0 items</span>
+          </div>
+          <div class="summary-row">
+            <span class="label">Subtotal</span>
+            <span class="value" id="summary-subtotal">₹0</span>
+          </div>
+          <div class="summary-row">
+            <span class="label">Shipping</span>
+            <span class="value" id="summary-shipping">₹99</span>
+          </div>
+          <div class="summary-row" style="margin-top:8px;">
+            <span style="font-size:0.78rem;color:var(--text-muted);">Free shipping on orders above ₹50,000</span>
+          </div>
+          <div class="summary-row total">
+            <span class="label">Total</span>
+            <span class="value" id="summary-total">₹0</span>
+          </div>
+
+          <a href="checkout.html" class="btn-checkout">Proceed to Checkout →</a>
+
+          <!-- Payment icons placeholder -->
+          <div style="display:flex;gap:8px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+            <span style="background:var(--bg-elevated);border:1px solid var(--border);padding:4px 12px;border-radius:4px;font-size:0.72rem;color:var(--text-muted);">💳 Cards</span>
+            <span style="background:var(--bg-elevated);border:1px solid var(--border);padding:4px 12px;border-radius:4px;font-size:0.72rem;color:var(--text-muted);">📱 UPI</span>
+            <span style="background:var(--bg-elevated);border:1px solid var(--border);padding:4px 12px;border-radius:4px;font-size:0.72rem;color:var(--text-muted);">🏦 Net Banking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Shop<span>EZ</span></div>
+        <p class="footer-desc">Premium electronics, curated for you.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+      <div></div><div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ShopEZ. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Load products first (needed for isInCart, etc.)
+      loadProducts(function () {
+        const cart = getCart();
+        const count = cart.length;
+        $("#cart-item-count-label").text(count + " item" + (count !== 1 ? "s" : "") + " in your cart");
+        if (count === 0) {
+          $("#cart-main-layout").hide();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details — ShopEZ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="shopez-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Shop<span>EZ</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+      <a href="cart.html" class="nav-cart-btn">
+        🛒 Cart <span class="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="products.html">Products</a>
+    <span>›</span>
+    <span id="breadcrumb-name" style="color:var(--text-secondary);">Product Details</span>
+  </div>
+
+  <!-- DETAIL SECTION -->
+  <div class="section-wrap" id="product-detail-wrap">
+    <!-- Loading state -->
+    <div id="detail-loading" style="text-align:center;padding:80px;color:var(--text-muted);">
+      Loading product details...
+    </div>
+
+    <!-- Detail content (hidden until loaded) -->
+    <div id="detail-content" style="display:none;">
+      <div class="detail-grid">
+        <!-- Image -->
+        <div class="detail-img-wrap">
+          <img id="detail-img" src="" alt="" />
+        </div>
+        <!-- Info -->
+        <div>
+          <p class="detail-category" id="detail-category"></p>
+          <h1 class="detail-title" id="detail-name"></h1>
+          <div class="product-rating" id="detail-rating" style="margin-bottom:20px;"></div>
+          <p class="detail-desc" id="detail-desc"></p>
+          <div class="detail-price-wrap">
+            <span class="detail-price" id="detail-price"></span>
+            <span class="detail-price-orig" id="detail-orig-price"></span>
+            <span class="detail-savings" id="detail-savings"></span>
+          </div>
+          <div class="detail-btn-group">
+            <button class="btn-primary" id="detail-add-cart" style="flex:1;justify-content:center;padding:16px 24px;font-size:1rem;">
+              🛒 Add to Cart
+            </button>
+            <a href="cart.html" class="btn-outline">View Cart</a>
+          </div>
+
+          <!-- Features list -->
+          <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border);">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;align-items:center;gap:12px;font-size:0.88rem;color:var(--text-secondary);">
+                <span style="color:var(--accent);">✓</span> Free shipping on orders above ₹50,000
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;font-size:0.88rem;color:var(--text-secondary);">
+                <span style="color:var(--accent);">✓</span> 7-day return policy
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;font-size:0.88rem;color:var(--text-secondary);">
+                <span style="color:var(--accent);">✓</span> 1 Year manufacturer warranty
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;font-size:0.88rem;color:var(--text-secondary);">
+                <span style="color:var(--accent);">✓</span> Genuine product, 100% authentic
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Not found -->
+    <div id="product-not-found" style="display:none;text-align:center;padding:80px;">
+      <div style="font-size:3rem;margin-bottom:16px;">😕</div>
+      <h2 style="font-family:var(--font-display);margin-bottom:12px;">Product Not Found</h2>
+      <p style="color:var(--text-muted);margin-bottom:28px;">The product you're looking for doesn't exist.</p>
+      <a href="products.html" class="btn-primary">Browse All Products</a>
+    </div>
+  </div>
+
+  <!-- MORE PRODUCTS -->
+  <section style="background:var(--bg-secondary);border-top:1px solid var(--border);">
+    <div class="section-wrap">
+      <div class="section-header">
+        <h2 class="section-title">You May Also <span>Like</span></h2>
+        <a href="products.html" class="view-all-link">View All →</a>
+      </div>
+      <div class="products-grid" id="related-products-grid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Shop<span>EZ</span></div>
+        <p class="footer-desc">Premium electronics, curated for you.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div></div><div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ShopEZ. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script>
+    $(document).ready(function () {
+      const params = new URLSearchParams(window.location.search);
+      const productId = parseInt(params.get("id"));
+
+      if (!productId) {
+        $("#detail-loading").hide();
+        $("#product-not-found").show();
+        return;
+      }
+
+      loadProducts(function (products) {
+        const product = products.find(p => p.id === productId);
+
+        if (!product) {
+          $("#detail-loading").hide();
+          $("#product-not-found").show();
+          return;
+        }
+
+        // Populate breadcrumb
+        $("#breadcrumb-name").text(product.name);
+
+        // Populate detail
+        $("#detail-img").attr("src", product.image).attr("alt", product.name)
+          .on("error", function() { $(this).attr("src", `https://via.placeholder.com/600x400/1a1a1a/f5a623?text=${encodeURIComponent(product.name)}`); });
+        $("#detail-category").text(product.category);
+        $("#detail-name").text(product.name);
+        $("#detail-desc").text(product.description);
+        $("#detail-price").text(formatPrice(product.price));
+
+        if (product.originalPrice) {
+          $("#detail-orig-price").text(formatPrice(product.originalPrice));
+          const pct = discountPercent(product.originalPrice, product.price);
+          $("#detail-savings").text(`Save ${pct}% — You save ${formatPrice(product.originalPrice - product.price)}!`);
+        }
+
+        // Rating
+        const stars = renderStars(product.rating || 4);
+        $("#detail-rating").html(`<span class="stars">${stars}</span> <span style="color:var(--text-secondary);font-size:0.88rem;">${product.rating} / 5 (${product.reviews} reviews)</span>`);
+
+        // Cart button state
+        if (isInCart(product.id)) {
+          $("#detail-add-cart").addClass("added").text("✓ Added to Cart").css("background", "#4caf50");
+        }
+
+        // Add to cart
+        $("#detail-add-cart").on("click", function () {
+          if ($(this).hasClass("added")) {
+            window.location.href = "cart.html";
+            return;
+          }
+          const added = addToCart(product);
+          if (added) {
+            $(this).addClass("added").text("✓ Added to Cart").css("background", "#4caf50");
+          }
+        });
+
+        $("#detail-loading").hide();
+        $("#detail-content").show().addClass("fade-in");
+
+        // Related products (different products, same or other category)
+        const related = products.filter(p => p.id !== productId).slice(0, 4);
+        renderProductCards(related, "#related-products-grid");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "ProBook Laptop",
+    "category": "Electronics",
+    "description": "High-performance laptop with Intel Core i7, 16GB RAM, 512GB SSD, and a stunning 15.6\" FHD display. Perfect for professionals and students alike.",
+    "price": 60000,
+    "originalPrice": 72000,
+    "rating": 4.5,
+    "reviews": 128,
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80",
+    "badge": "Best Seller"
+  },
+  {
+    "id": 2,
+    "name": "Nova Smartphone",
+    "category": "Electronics",
+    "description": "Latest flagship smartphone with 6.7\" AMOLED display, 108MP camera, 5000mAh battery, and 5G connectivity. Experience the future in your hands.",
+    "price": 25000,
+    "originalPrice": 30000,
+    "rating": 4.3,
+    "reviews": 245,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80",
+    "badge": "New"
+  },
+  {
+    "id": 3,
+    "name": "SoundWave Headphones",
+    "category": "Audio",
+    "description": "Premium wireless headphones with Active Noise Cancellation, 30-hour battery life, and Hi-Res audio certification. Immerse yourself in pure sound.",
+    "price": 8500,
+    "originalPrice": 12000,
+    "rating": 4.7,
+    "reviews": 89,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80",
+    "badge": "Sale"
+  },
+  {
+    "id": 4,
+    "name": "SmartWatch Pro",
+    "category": "Wearables",
+    "description": "Advanced smartwatch with health monitoring, GPS, SpO2 sensor, and 7-day battery life. Stay connected and healthy with style.",
+    "price": 15000,
+    "originalPrice": 18000,
+    "rating": 4.2,
+    "reviews": 67,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80",
+    "badge": ""
+  },
+  {
+    "id": 5,
+    "name": "4K Gaming Monitor",
+    "category": "Electronics",
+    "description": "27-inch 4K IPS gaming monitor with 144Hz refresh rate, 1ms response time, and G-Sync compatible. Elevate your gaming and creative work.",
+    "price": 35000,
+    "originalPrice": 42000,
+    "rating": 4.6,
+    "reviews": 54,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80",
+    "badge": "Hot"
+  },
+  {
+    "id": 6,
+    "name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "description": "TKL mechanical keyboard with Cherry MX switches, RGB backlighting, and aluminum frame. Built for typists and gamers who demand precision.",
+    "price": 6500,
+    "originalPrice": 8000,
+    "rating": 4.4,
+    "reviews": 112,
+    "image": "https://images.unsplash.com/photo-1601445638532-1f2c8a2c0b2a?w=600&q=80",
+    "badge": ""
+  },
+  {
+    "id": 7,
+    "name": "Wireless Earbuds",
+    "category": "Audio",
+    "description": "True wireless earbuds with 6-hour playtime, charging case for 24 total hours, IPX5 water resistance, and seamless device switching.",
+    "price": 4200,
+    "originalPrice": 5500,
+    "rating": 4.1,
+    "reviews": 198,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&q=80",
+    "badge": "Sale"
+  },
+  {
+    "id": 8,
+    "name": "Portable SSD 1TB",
+    "category": "Storage",
+    "description": "Ultra-fast portable SSD with 1050MB/s read speed, USB 3.2 Gen 2 interface, and rugged design. Your data, always at hand.",
+    "price": 9000,
+    "originalPrice": 11000,
+    "rating": 4.8,
+    "reviews": 73,
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&q=80",
+    "badge": "Top Rated"
+  }
+]

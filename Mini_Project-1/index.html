@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEZ — Premium Electronics Store</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="shopez-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Shop<span>EZ</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+      <a href="cart.html" class="nav-cart-btn">
+        🛒 Cart <span class="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-tag">✦ New Arrivals 2025</div>
+        <h1 class="hero-title">
+          Shop <em>Smart,</em><br>
+          Live Better
+        </h1>
+        <p class="hero-subtitle">
+          Discover premium electronics and accessories curated for the modern lifestyle. Unbeatable prices, lightning-fast delivery.
+        </p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn-primary">Shop Now →</a>
+          <a href="#featured" class="btn-outline">View Featured</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Products</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4.8★</div>
+            <div class="stat-label">Avg Rating</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-product-card">
+          <span class="floating-badge">Best Seller</span>
+          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+               alt="Featured Laptop" class="hero-product-img"
+               onerror="this.style.display='none'">
+          <p class="product-category">Electronics</p>
+          <h3 class="hero-product-name">ProBook Laptop</h3>
+          <div class="hero-product-price">₹60,000</div>
+          <a href="products.html" class="btn-primary" style="width:100%;justify-content:center">Add to Cart 🛒</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CATEGORIES ======= -->
+  <section style="background:var(--bg-secondary); border-bottom:1px solid var(--border);">
+    <div class="section-wrap" style="padding-top:48px;padding-bottom:48px;">
+      <h2 class="section-title" style="margin-bottom:28px;">Browse by <span>Category</span></h2>
+      <div class="categories-grid">
+        <a href="products.html?cat=Electronics" class="category-card">
+          <span class="category-icon">💻</span>
+          <p class="category-name">Electronics</p>
+        </a>
+        <a href="products.html?cat=Audio" class="category-card">
+          <span class="category-icon">🎧</span>
+          <p class="category-name">Audio</p>
+        </a>
+        <a href="products.html?cat=Wearables" class="category-card">
+          <span class="category-icon">⌚</span>
+          <p class="category-name">Wearables</p>
+        </a>
+        <a href="products.html?cat=Accessories" class="category-card">
+          <span class="category-icon">⌨️</span>
+          <p class="category-name">Accessories</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FEATURED PRODUCTS ======= -->
+  <section id="featured">
+    <div class="section-wrap">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured <span>Products</span></h2>
+          <p class="section-subtitle">Hand-picked deals just for you</p>
+        </div>
+        <a href="products.html" class="view-all-link">View All Products →</a>
+      </div>
+      <div class="products-grid" id="featured-products-grid">
+        <!-- Loaded by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= WHY SHOPEZ ======= -->
+  <section style="background:var(--bg-secondary); border-top:1px solid var(--border);">
+    <div class="section-wrap">
+      <div class="section-header" style="margin-bottom:40px;">
+        <div>
+          <h2 class="section-title">Why <span>ShopEZ?</span></h2>
+          <p class="section-subtitle">The smart choice for every shopper</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:12px;">🚀</div>
+          <h4 style="font-family:var(--font-display);font-size:1.05rem;margin:0 0 8px;">Fast Delivery</h4>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">Get your orders delivered within 2–3 business days across India.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:12px;">🔒</div>
+          <h4 style="font-family:var(--font-display);font-size:1.05rem;margin:0 0 8px;">Secure Payments</h4>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">100% secure checkout. Your data is always protected.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:12px;">↩️</div>
+          <h4 style="font-family:var(--font-display);font-size:1.05rem;margin:0 0 8px;">Easy Returns</h4>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">7-day no-questions-asked return policy on all products.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:12px;">🤝</div>
+          <h4 style="font-family:var(--font-display);font-size:1.05rem;margin:0 0 8px;">24/7 Support</h4>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">Our support team is always here to help you, anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Shop<span>EZ</span></div>
+        <p class="footer-desc">Your one-stop destination for premium electronics and accessories. Quality guaranteed, prices unbeatable.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Shop</p>
+        <ul class="footer-links">
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?cat=Electronics">Electronics</a></li>
+          <li><a href="products.html?cat=Audio">Audio</a></li>
+          <li><a href="products.html?cat=Wearables">Wearables</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Account</p>
+        <ul class="footer-links">
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Info</p>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ShopEZ. All rights reserved.</span>
+      <span>Built with HTML5 · CSS3 · JavaScript · jQuery · Bootstrap</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Load only first 4 products as featured
+      loadProducts(function (products) {
+        renderProductCards(products.slice(0, 4), "#featured-products-grid");
+      });
+    });
+  </script>
+</body>
+</html>
