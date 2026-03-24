@@ -23,9 +23,10 @@ class Program
                 oddCount++;
         }
 
-        
+        Console.WriteLine("====================");
         Console.WriteLine($"Even Count: {evenCount}");
         Console.WriteLine($"Odd Count: {oddCount}");
         Console.WriteLine($"Sum: {sum}");
+        
     }
 }
