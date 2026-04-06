@@ -1,0 +1,27 @@
+@using NewMvcApp.Models
+@model List<Product>
+<h1>Product details</h1>
+<a class="btn btn-primary" asp-action="Create">create</a>
+<table border="1" class="table">
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>details</th>
+        <th>edit</th>
+        <th>Delete</th>
+        </tr>
+     @foreach(var p in Model){
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Category</td>
+            <td>@p.Price</td>
+            <td> <a asp-action="Details" asp-route-id="@p.Id">View Details</a></td>
+            <td> <a asp-action="Edit" asp-route-id="@p.Id">edit Details</a></td>
+            <td> <a asp-action="Delete" asp-route-id="@p.Id">Delete Product</a></td>
+            
+        </tr>
+     }
+</table>
