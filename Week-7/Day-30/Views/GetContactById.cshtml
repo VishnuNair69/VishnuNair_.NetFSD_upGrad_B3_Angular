@@ -1,0 +1,28 @@
+@using NewMvcApp.Models
+@model List<ContactInfo>
+<h1>Contact details</h1>
+<table border="1" class="table">
+        <tr>
+        <th>ContactId</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>CompanyName</th>
+        <th>EmailId</th>
+        <th>MobileNo</th>
+        <th>Designation</th>
+        </tr>
+     @foreach(var p in Model){
+        <tr>
+            <td>@p.ContactId</td>
+            <td>@p.FirstName</td>
+            <td>@p.LastName</td>
+            <td>@p.CompanyName</td>
+            <td>@p.EmailId</td>
+            <td>@p.MobileNo</td>
+            <td>@p.Designation</td>
+        </tr>
+     }
+</table>
+<a asp-action="ShowContacts" class="btn btn-secondary">Back to contacts</a> 
+
+ 
