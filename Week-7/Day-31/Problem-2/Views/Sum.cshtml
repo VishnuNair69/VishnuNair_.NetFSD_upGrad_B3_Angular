@@ -1,0 +1,12 @@
+<h1>addition operation</h1>
+<form asp-action="Sum" method="post">
+<label>num1:</label>
+<input type="number" name="num1" required />
+<label>num2:</label>
+<input type="number" name="num2" required/>
+<button type="submit">Add</button>
+</form>
+@if(ViewData["sum"] != null)
+{
+    <h3>Result: @ViewData["sum"]</h3>
+}

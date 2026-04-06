@@ -1,0 +1,38 @@
+<h2>Add Product</h2>
+
+<form asp-action="Index" method="post">
+    <label>Product Name:</label>
+    <input type="text" name="name" required /><br /><br />
+
+    <label>Price:</label>
+    <input type="number" name="price"  required/><br /><br />
+
+    <label>Quantity:</label>
+    <input type="number" name="quantity" required /><br /><br />
+
+    <button type="submit">Add Product</button>
+</form>
+
+<hr />
+
+<h2>Product List</h2>
+
+<table border="1" class="table">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+
+    @if(ViewBag.Products != null)
+    {
+        foreach(var p in ViewBag.Products)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+                <td>@p.Quantity</td>
+            </tr>
+        }
+    }
+</table>
