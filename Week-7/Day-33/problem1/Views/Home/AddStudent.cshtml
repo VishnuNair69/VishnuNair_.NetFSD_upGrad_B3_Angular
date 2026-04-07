@@ -1,0 +1,20 @@
+@using Relationships.Models
+@model Student
+
+<h1>Add Student Data</h1>
+
+<form asp-action="AddStudent" method="post">
+
+    <label>Student Name</label>
+    <input asp-for="Studentname" class="form-control" />
+
+    <label>Course No</label>
+    <input asp-for="Courseid" class="form-control" />
+
+    <label>Course Name</label>
+    <input type="text" name="Coursename" class="form-control" />
+
+    <button type="submit">Submit</button>
+
+</form>
+<a asp-action="Students" class="btn btn-primary">Back to list</a>

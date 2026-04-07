@@ -1,0 +1,26 @@
+@using Relationships.Models
+@model List<Dept>
+<h1>dept data</h1>
+<table class="table">
+    <tr>
+        <th>deptid</th>
+        <th>dname</th>
+        <th>location</th>
+        <th>employees</th>
+    </tr>
+    @foreach(var dep in Model){
+        <tr>
+            <td>@dep.Deptid</td>
+            <td>@dep.Dname</td>
+            <td>@dep.Location</td>
+            <td>
+                <ul>
+                    @foreach(var employee in dep.Employees){
+                        <li>@employee.Empname</li>
+                    }
+                </ul>
+                
+            </td>
+        </tr>
+    }
+</table>

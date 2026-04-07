@@ -1,0 +1,53 @@
+@model ContactManagementSystem.Models.ContactInfo
+
+<h2>Add Contact</h2>
+
+<form asp-action="AddContact" method="post">
+
+    <div>
+        <label>First Name</label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="EmailId" class="form-control" />
+    </div>
+
+    <div>
+        <label>Mobile</label>
+        <input asp-for="MobileNo" class="form-control" />
+    </div>
+
+    <div>
+        <label>Designation</label>
+        <input asp-for="Designation" class="form-control" />
+        <span asp-validation-for="Designation" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Company</label>
+        <select asp-for="Companyid" asp-items="ViewBag.Companies" class="form-control">
+            <option value="">-- Select Company --</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Department</label>
+        <select asp-for="Departmentid" asp-items="ViewBag.Departments" class="form-control">
+            <option value="">-- Optional --</option>
+        </select>
+    </div>
+
+    <br />
+<input type="submit" value="Save" />
+    <a asp-action="ShowContacts" class="btn btn-secondary">Back</a>
+</form>
+

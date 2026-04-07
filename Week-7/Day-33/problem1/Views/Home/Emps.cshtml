@@ -1,0 +1,26 @@
+@using Relationships.Models
+@model List<Employee>
+
+<h1>Employee data</h1>
+<table class="table">
+    <tr>
+        <th>empid</th>
+        <th>empname</th>
+        <th>job</th>
+        <th>salary</th>
+        <th>deptid</th>
+
+    </tr>
+    
+        @foreach(var emps in Model){
+         <tr>
+            <td>@emps.Id</td>
+            <td>@emps.Empname</td>
+            <td>@emps.Job</td>
+            <td>@emps.Salary</td>
+            <td>@emps.Deptid</td>
+         </tr>
+        }
+    
+
+</table>
