@@ -1,0 +1,27 @@
+@model IEnumerable<Student>
+
+
+<table class="table">
+
+    <tr>
+        <th>Student Id</th>
+        <th>Name</th>
+        
+       
+        <th>Course Name</th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentId</td>
+            <td>@item.StudentName</td>
+            
+            
+            <td>@item.Course.CourseName</td>
+            
+        </tr>
+    }
+
+</table>
