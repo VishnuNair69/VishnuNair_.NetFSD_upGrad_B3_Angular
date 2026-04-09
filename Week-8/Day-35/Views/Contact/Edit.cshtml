@@ -1,0 +1,59 @@
+@model ContactInfo
+
+<h2>Edit Contact</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="ContactId" />
+
+    <label asp-for="FirstName"></label>
+<input asp-for="FirstName" />
+<span asp-validation-for="FirstName" class="text-danger"></span>
+
+    <div>
+        <label asp-for="LastName">Last Name</label>
+        <input asp-for="LastName" />
+    </div>
+
+    <div>
+         <label asp-for="FirstName"></label>
+        <input asp-for="EmailId" />
+    </div>
+    <span asp-validation-for="EmailId" class="text-danger"></span>
+
+    <div>
+        <label asp-for="MobileNo"></label>
+        <input asp-for="MobileNo" />
+    </div>
+    <span asp-validation-for="MobileNo" class="text-danger"></span>
+    <div>
+        <label asp-for="Designation"></label>
+        <input asp-for="Designation" />
+    </div>
+    <span asp-validation-for="Designation" class="text-danger"></span>
+
+    <div>
+        <label  asp-for="CompanyId"></label>
+        <select asp-for="CompanyId" asp-items="ViewBag.Companies">
+            <option value="">--Select Company--</option>
+        </select>
+    </div>
+    <span asp-validation-for="CompanyId" class="text-danger"></span>
+
+    <div>
+        <label asp-for="DepartmentId"></label>
+        <select asp-for="DepartmentId" asp-items="ViewBag.Departments">
+            <option value="">--Select Department--</option>
+        </select>
+    </div>
+    <span asp-validation-for="DepartmentId" class="text-danger"></span>
+
+    <br />
+
+    <button type="submit">Update</button>
+    <a href="Index">Back</a>
+
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
