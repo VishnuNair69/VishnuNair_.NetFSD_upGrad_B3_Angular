@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\ecommerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:ecommerce.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|e:\\b3_.netangular_vishnunair_shopez_ecommerceapplication\\ecommerce.api\\migrations\\20260413052226_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A20E287-D01D-9ED3-F125-A5A55DEE7706}|ECommerce.API.csproj|solutionrelative:migrations\\20260413052226_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProductRepository.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:32:37.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IProductRepository.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "Repositories\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:32:26.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Services\\ProductService.cs",
+              "RelativeToolTip": "Services\\ProductService.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:27:17.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "Services\\IProductService.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Services\\IProductService.cs",
+              "RelativeToolTip": "Services\\IProductService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:27:08.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DTOs.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\DTOs\\DTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\DTOs.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\DTOs\\DTOs.cs",
+              "RelativeToolTip": "DTOs\\DTOs.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:19:52.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:19:14.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20260413052226_InitialCreate.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Migrations\\20260413052226_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260413052226_InitialCreate.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Migrations\\20260413052226_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20260413052226_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:22:26.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:20:00.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:18:56.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T05:17:47.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-13T04:28:26.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ECommerce.API.csproj",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\ECommerce.API.csproj",
+              "RelativeDocumentMoniker": "ECommerce.API.csproj",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\ECommerce.API.csproj",
+              "RelativeToolTip": "ECommerce.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-13T04:22:33.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "README.md",
+              "DocumentMoniker": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "E:\\B3_.NetAngular_VishnuNair_ShopEZ_ECommerceApplication\\ECommerce.API\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-13T04:22:23.142Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
