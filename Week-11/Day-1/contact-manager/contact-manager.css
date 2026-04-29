@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th {
+  background: #ddd;
+}
+
+input {
+  padding: 8px;
+  width: 300px;
+}

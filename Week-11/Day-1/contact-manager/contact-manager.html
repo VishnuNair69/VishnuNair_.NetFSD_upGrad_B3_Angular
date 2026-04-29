@@ -1,0 +1,36 @@
+<h2>Contact Management Module</h2>
+
+<input
+  type="text"
+  placeholder="Search by name or email"
+  [(ngModel)]="searchText"
+/>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+
+  <tr *ngFor="let contact of (contacts | searchFilter:searchText | slice:0:showCount)">
+    <td>{{ contact.name | titlecase }}</td>
+    <td>{{ contact.email | lowercase }}</td>
+    <td>{{ contact.phone | phoneFormatter }}</td>
+    <td>
+      <span [style.color]="contact.status ? 'green' : 'red'">
+        {{ contact.status | status }}
+      </span>
+    </td>
+    <td>
+      <button (click)="toggleStatus(contact)">Toggle Status</button>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<button (click)="showMore()">Show More</button>
+<button (click)="showLess()">Show Less</button>
