@@ -1,0 +1,15 @@
+<h2>Contact List</h2>
+
+<button routerLink="/add-contact">Add Contact</button>
+
+<p>Total Contacts: {{ contacts.length }}</p>
+
+<ul>
+  <li *ngFor="let contact of contacts">
+    {{ contact.name }} - {{ contact.email }} - {{ contact.phone }}
+
+    <button (click)="deleteContact(contact.contactId!)">
+      Delete
+    </button>
+  </li>
+</ul>
