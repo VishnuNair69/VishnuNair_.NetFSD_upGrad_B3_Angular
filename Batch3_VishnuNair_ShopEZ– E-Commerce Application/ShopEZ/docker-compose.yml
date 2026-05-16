@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+
+  # ── SQL Server (single instance, each service uses its own DB) ──────────
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: shopez-sqlserver
+    environment:
+      SA_PASSWORD: "ShopEZ@123!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - shopez-network
+
+  # ── User Service (port 8081) ─────────────────────────────────────────────
+  user-service:
+    build:
+      context: ./services/UserService
+      dockerfile: Dockerfile
+    container_name: shopez-user-service
+    ports:
+      - "8081:8081"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=ShopEZ_Users;User Id=sa;Password=ShopEZ@123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - shopez-network
+
+  # ── Product Service (port 8082) — uses Dapper ───────────────────────────
+  product-service:
+    build:
+      context: ./services/ProductService
+      dockerfile: Dockerfile
+    container_name: shopez-product-service
+    ports:
+      - "8082:8082"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=ShopEZ_Products;User Id=sa;Password=ShopEZ@123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - shopez-network
+
+  # ── Order Service (port 8083) ────────────────────────────────────────────
+  order-service:
+    build:
+      context: ./services/OrderService
+      dockerfile: Dockerfile
+    container_name: shopez-order-service
+    ports:
+      - "8083:8083"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=ShopEZ_Orders;User Id=sa;Password=ShopEZ@123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - shopez-network
+
+  # ── Cart Service (port 8084) ─────────────────────────────────────────────
+  cart-service:
+    build:
+      context: ./services/CartService
+      dockerfile: Dockerfile
+    container_name: shopez-cart-service
+    ports:
+      - "8084:8084"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=ShopEZ_Cart;User Id=sa;Password=ShopEZ@123!;TrustServerCertificate=True;
+    depends_on:
+      - sqlserver
+    networks:
+      - shopez-network
+
+  # ── API Gateway / Ocelot (port 8080) ────────────────────────────────────
+  api-gateway:
+    build:
+      context: ./ApiGateway
+      dockerfile: Dockerfile
+    container_name: shopez-api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
+      - cart-service
+    networks:
+      - shopez-network
+
+networks:
+  shopez-network:
+    driver: bridge
+
+volumes:
+  sqlserver_data:

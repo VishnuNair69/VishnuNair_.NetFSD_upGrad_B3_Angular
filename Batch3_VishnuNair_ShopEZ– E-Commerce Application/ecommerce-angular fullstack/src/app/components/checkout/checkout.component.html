@@ -1,0 +1,42 @@
+<div class="page-container">
+  <div class="success-wrap" *ngIf="success">
+    <div class="success-icon">✓</div>
+    <h1>Order Placed!</h1>
+    <p>Your order #{{ placedOrderId }} has been successfully placed.</p>
+    <a routerLink="/" class="btn btn-primary" style="margin-top:24px">Continue Shopping</a>
+  </div>
+  <ng-container *ngIf="!success">
+    <div class="page-header"><h1>Checkout</h1><p>Review your order before placing.</p></div>
+    <div class="alert alert-danger" *ngIf="error">{{ error }}</div>
+    <div class="checkout-layout" *ngIf="(cartItems$ | async) as items">
+      <div class="empty-state" *ngIf="items.length === 0">
+        <div class="empty-icon">◇</div><h3>Your cart is empty</h3>
+        <a routerLink="/" class="btn btn-primary" style="margin-top:20px">Go Shopping</a>
+      </div>
+      <ng-container *ngIf="items.length > 0">
+        <div class="checkout-items">
+          <h2>Order Items</h2><div class="divider"></div>
+          <div class="checkout-item" *ngFor="let entry of items">
+            <img [src]="getImageUrl(entry.product.imageUrl)" [alt]="entry.product.name" class="co-img" />
+            <div class="co-info"><span class="co-name">{{ entry.product.name }}</span><span class="co-qty">Qty: {{ entry.quantity }}</span></div>
+            <span class="co-price">₹{{ (entry.product.price * entry.quantity) | number:'1.0-0' }}</span>
+          </div>
+          <div class="divider"></div>
+          <div class="co-total"><span>Total Amount</span><span>₹{{ cartService.totalAmount | number:'1.0-0' }}</span></div>
+        </div>
+        <div class="checkout-details card">
+          <h2>Order Details</h2><div class="divider"></div>
+          <div class="info-row"><span class="info-label">Customer</span><span>{{ authService.currentUser?.name }}</span></div>
+          <div class="info-row"><span class="info-label">Email</span><span>{{ authService.currentUser?.email }}</span></div>
+          <div class="info-row"><span class="info-label">Items</span><span>{{ cartService.totalItems }} item(s)</span></div>
+          <div class="info-row"><span class="info-label">Total</span><strong>₹{{ cartService.totalAmount | number:'1.0-0' }}</strong></div>
+          <div class="divider"></div>
+          <button class="btn btn-primary place-btn" [disabled]="loading" (click)="placeOrder()">
+            {{ loading ? 'Placing Order...' : 'Place Order' }}
+          </button>
+          <a routerLink="/cart" class="btn btn-outline place-btn" style="margin-top:12px;">← Back to Cart</a>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

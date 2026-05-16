@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="nav-inner">
+    <a routerLink="/" class="brand">
+      <span class="brand-icon">◆</span>
+      ShopEZ
+    </a>
+
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Products</a>
+      <a routerLink="/cart" routerLinkActive="active">
+        Cart
+        <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+      </a>
+      <a routerLink="/admin" routerLinkActive="active" *ngIf="authService.isAdmin">Admin</a>
+    </div>
+
+    <div class="nav-auth">
+      <ng-container *ngIf="currentUser; else loggedOut">
+        <span class="user-info">
+          <span class="user-name">{{ currentUser.name }}</span>
+          <span class="user-role">{{ currentUser.role }}</span>
+        </span>
+        <button class="btn btn-outline btn-sm" (click)="logout()">Logout</button>
+      </ng-container>
+      <ng-template #loggedOut>
+        <a routerLink="/login" class="btn btn-outline btn-sm">Login</a>
+        <a routerLink="/register" class="btn btn-primary btn-sm">Register</a>
+      </ng-template>
+    </div>
+  </div>
+</nav>

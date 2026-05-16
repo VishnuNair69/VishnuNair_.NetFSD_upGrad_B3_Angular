@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\FInal_Project_Upgard\\ShopEZ_Phase4_Microservices (1)\\ShopEZ\\services\\UserService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3B98574C-C3D9-E5A0-8677-20729192D278}|UserService.csproj|e:\\final_project_upgard\\shopez_phase4_microservices (1)\\shopez\\services\\userservice\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B98574C-C3D9-E5A0-8677-20729192D278}|UserService.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B98574C-C3D9-E5A0-8677-20729192D278}|UserService.csproj|e:\\final_project_upgard\\shopez_phase4_microservices (1)\\shopez\\services\\userservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3B98574C-C3D9-E5A0-8677-20729192D278}|UserService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B98574C-C3D9-E5A0-8677-20729192D278}|UserService.csproj|e:\\final_project_upgard\\shopez_phase4_microservices (1)\\shopez\\services\\userservice\\services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B98574C-C3D9-E5A0-8677-20729192D278}|UserService.csproj|solutionrelative:services\\userserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserServiceImpl.cs",
+              "DocumentMoniker": "E:\\FInal_Project_Upgard\\ShopEZ_Phase4_Microservices (1)\\ShopEZ\\services\\UserService\\Services\\UserServiceImpl.cs",
+              "RelativeDocumentMoniker": "Services\\UserServiceImpl.cs",
+              "ToolTip": "E:\\FInal_Project_Upgard\\ShopEZ_Phase4_Microservices (1)\\ShopEZ\\services\\UserService\\Services\\UserServiceImpl.cs",
+              "RelativeToolTip": "Services\\UserServiceImpl.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T09:18:22.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\FInal_Project_Upgard\\ShopEZ_Phase4_Microservices (1)\\ShopEZ\\services\\UserService\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "E:\\FInal_Project_Upgard\\ShopEZ_Phase4_Microservices (1)\\ShopEZ\\services\\UserService\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-14T09:18:08.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "E:\\FInal_Project_Upgard\\ShopEZ_Phase4_Microservices (1)\\ShopEZ\\services\\UserService\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "E:\\FInal_Project_Upgard\\ShopEZ_Phase4_Microservices (1)\\ShopEZ\\services\\UserService\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwBwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T09:01:24.393Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

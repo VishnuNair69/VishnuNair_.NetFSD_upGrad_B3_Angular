@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/users/{everything}",
+      "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+      "DownstreamPathTemplate": "/api/users/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 8081 }]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/users",
+      "UpstreamHttpMethod": ["GET","POST"],
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "user-service", "Port": 8081 }]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/products/{everything}",
+      "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+      "DownstreamPathTemplate": "/api/products/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "product-service", "Port": 8082 }]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/products",
+      "UpstreamHttpMethod": ["GET","POST"],
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "product-service", "Port": 8082 }]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/orders/{everything}",
+      "UpstreamHttpMethod": ["GET","POST"],
+      "DownstreamPathTemplate": "/api/orders/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "order-service", "Port": 8083 }]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/orders",
+      "UpstreamHttpMethod": ["GET","POST"],
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "order-service", "Port": 8083 }]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/cart/{everything}",
+      "UpstreamHttpMethod": ["GET","POST","DELETE"],
+      "DownstreamPathTemplate": "/api/cart/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{ "Host": "cart-service", "Port": 8084 }]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8080"
+  }
+}
